@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- setter 方式 -->
+    <bean id="student" class="com.viagra.springMVC.vo.Student">
+        <property name="name" value="李四"></property>
+        <property name="age" value="30"></property>
+    </bean>
+
+    <!-- 默认构造方法实例化 -->
+    <bean id="student2" class="com.viagra.springMVC.vo.Student"></bean>
+    <!-- 带参构造方法实例化 -->
+    <bean id="studentArgs" class="com.viagra.springMVC.vo.Student">
+        <constructor-arg name="name" value="张三"></constructor-arg>
+        <constructor-arg name="age" value="18"></constructor-arg>
+    </bean>
+
+    <!-- 静态工厂方法 -->
+    <bean id="studentFactory" class="com.viagra.springMVC.vo.StudentFactory"
+          factory-method="createStudent"></bean>
+    <bean id="studentFactoryArgs" class="com.viagra.springMVC.vo.StudentFactory"
+          factory-method="createStudent">
+        <constructor-arg name="name" value="张三" />
+        <constructor-arg name="age" value="18" />
+    </bean>
+
+
+</beans>

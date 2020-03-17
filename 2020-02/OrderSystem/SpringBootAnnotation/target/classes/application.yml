@@ -1,0 +1,6 @@
+configuration:
+  properties:
+    name: This is EnableConfigurationProperties!
+
+server:
+  port: 8081

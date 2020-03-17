@@ -1,0 +1,393 @@
+2020-03-08 15:43:35.923
+Affect(class-cnt:7 , method-cnt:185) cost in 429 ms.
+
+2020-03-08 15:43:45.106
+`---ts=2020-03-08 15:43:44;thread_name=http-nio-8080-exec-5;id=27;is_daemon=true;priority=5;TCCL=org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedWebappClassLoader@bc3b152
+    `---[98.236117ms] javax.servlet.http.HttpServlet:service()
+        `---[97.885303ms] javax.servlet.http.HttpServlet:service() #742
+            `---[97.38169ms] org.springframework.web.servlet.FrameworkServlet:service()
+                +---[0.098462ms] javax.servlet.http.HttpServletRequest:getMethod() #841
+                +---[0.012034ms] org.springframework.http.HttpMethod:resolve() #841
+                `---[97.139184ms] org.springframework.web.servlet.HttpServletBean:service() #846
+                    `---[96.93679ms] javax.servlet.http.HttpServlet:service()
+                        +---[0.022975ms] javax.servlet.http.HttpServletRequest:getMethod() #628
+                        +---[0.124353ms] javax.servlet.http.HttpServlet:getLastModified() #631
+                        |   `---[0.071476ms] javax.servlet.http.HttpServlet:getLastModified()
+                        `---[96.666933ms] javax.servlet.http.HttpServlet:doGet() #635
+                            `---[96.538933ms] org.springframework.web.servlet.FrameworkServlet:doGet()
+                                `---[96.395617ms] org.springframework.web.servlet.FrameworkServlet:processRequest() #861
+                                    `---[96.199059ms] org.springframework.web.servlet.FrameworkServlet:processRequest()
+                                        +---[0.022245ms] org.springframework.context.i18n.LocaleContextHolder:getLocaleContext() #958
+                                        +---[0.638177ms] org.springframework.web.servlet.FrameworkServlet:buildLocaleContext() #959
+                                        |   `---[0.14915ms] org.springframework.web.servlet.DispatcherServlet:buildLocaleContext()
+                                        |       `---[0.01641ms] org.springframework.web.servlet.DispatcherServlet$1:<init>() #1076
+                                        +---[0.02261ms] org.springframework.web.context.request.RequestContextHolder:getRequestAttributes() #961
+                                        +---[0.206039ms] org.springframework.web.servlet.FrameworkServlet:buildRequestAttributes() #962
+                                        |   `---[0.122895ms] org.springframework.web.servlet.FrameworkServlet:buildRequestAttributes()
+                                        |       `---[0.021151ms] org.springframework.web.context.request.ServletRequestAttributes:<init>() #1035
+                                        +---[0.019693ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #964
+                                        +---[0.007293ms] org.springframework.web.servlet.FrameworkServlet$RequestBindingInterceptor:<init>() #965
+                                        +---[0.016775ms] org.springframework.web.context.request.async.WebAsyncManager:registerCallableInterceptor() #965
+                                        +---[0.399681ms] org.springframework.web.servlet.FrameworkServlet:initContextHolders() #967
+                                        |   `---[0.297208ms] org.springframework.web.servlet.FrameworkServlet:initContextHolders()
+                                        |       +---[0.020422ms] org.springframework.context.i18n.LocaleContextHolder:setLocaleContext() #1046
+                                        |       +---[0.009482ms] org.springframework.web.context.request.RequestContextHolder:setRequestAttributes() #1049
+                                        |       `---[0.023704ms] org.apache.commons.logging.Log:isTraceEnabled() #1051
+                                        +---[92.826206ms] org.springframework.web.servlet.FrameworkServlet:doService() #970
+                                        |   `---[92.689818ms] org.springframework.web.servlet.DispatcherServlet:doService()
+                                        |       +---[0.02188ms] org.apache.commons.logging.Log:isDebugEnabled() #867
+                                        |       +---[0.020057ms] org.springframework.web.util.WebUtils:isIncludeRequest() #876
+                                        |       +---[0.121071ms] org.springframework.web.servlet.DispatcherServlet:getWebApplicationContext() #888
+                                        |       |   `---[0.060536ms] org.springframework.web.servlet.FrameworkServlet:getWebApplicationContext()
+                                        |       +---[0.034279ms] javax.servlet.http.HttpServletRequest:setAttribute() #888
+                                        |       +---[0.008023ms] javax.servlet.http.HttpServletRequest:setAttribute() #889
+                                        |       +---[0.0062ms] javax.servlet.http.HttpServletRequest:setAttribute() #890
+                                        |       +---[0.313253ms] org.springframework.web.servlet.DispatcherServlet:getThemeSource() #891
+                                        |       |   `---[0.268034ms] org.springframework.web.servlet.DispatcherServlet:getThemeSource()
+                                        |       |       +---[0.067464ms] org.springframework.web.servlet.DispatcherServlet:getWebApplicationContext() #771
+                                        |       |       |   `---[0.037926ms] org.springframework.web.servlet.FrameworkServlet:getWebApplicationContext()
+                                        |       |       `---[0.125447ms] org.springframework.web.servlet.DispatcherServlet:getWebApplicationContext() #772
+                                        |       |           `---[0.087156ms] org.springframework.web.servlet.FrameworkServlet:getWebApplicationContext()
+                                        |       +---[0.01714ms] javax.servlet.http.HttpServletRequest:setAttribute() #891
+                                        |       +---[0.033185ms] org.springframework.web.servlet.FlashMapManager:retrieveAndUpdate() #893
+                                        |       +---[0.017869ms] org.springframework.web.servlet.FlashMap:<init>() #897
+                                        |       +---[0.026621ms] javax.servlet.http.HttpServletRequest:setAttribute() #897
+                                        |       +---[0.010576ms] javax.servlet.http.HttpServletRequest:setAttribute() #898
+                                        |       +---[91.661807ms] org.springframework.web.servlet.DispatcherServlet:doDispatch() #901
+                                        |       |   `---[91.094013ms] org.springframework.web.servlet.DispatcherServlet:doDispatch()
+                                        |       |       +---[0.03975ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #929
+                                        |       |       +---[0.362849ms] org.springframework.web.servlet.DispatcherServlet:checkMultipart() #936
+                                        |       |       |   `---[0.231202ms] org.springframework.web.servlet.DispatcherServlet:checkMultipart()
+                                        |       |       |       `---[0.033915ms] org.springframework.web.multipart.MultipartResolver:isMultipart() #1093
+                                        |       |       +---[7.666868ms] org.springframework.web.servlet.DispatcherServlet:getHandler() #940
+                                        |       |       |   `---[7.534127ms] org.springframework.web.servlet.DispatcherServlet:getHandler()
+                                        |       |       |       +---[min=0.004741ms,max=0.028445ms,total=0.033186ms,count=2] org.apache.commons.logging.Log:isTraceEnabled() #1156
+                                        |       |       |       `---[min=0.257094ms,max=6.854378ms,total=7.111472ms,count=2] org.springframework.web.servlet.HandlerMapping:getHandler() #1160
+                                        |       |       +---[0.026622ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #941
+                                        |       |       +---[0.004011ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #947
+                                        |       |       +---[0.604627ms] org.springframework.web.servlet.DispatcherServlet:getHandlerAdapter() #947
+                                        |       |       |   `---[0.326747ms] org.springframework.web.servlet.DispatcherServlet:getHandlerAdapter()
+                                        |       |       |       +---[0.009846ms] org.apache.commons.logging.Log:isTraceEnabled() #1195
+                                        |       |       |       `---[0.045584ms] org.springframework.web.servlet.HandlerAdapter:supports() #1198
+                                        |       |       +---[0.022975ms] javax.servlet.http.HttpServletRequest:getMethod() #950
+                                        |       |       +---[0.002553ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #953
+                                        |       |       +---[0.01094ms] org.springframework.web.servlet.HandlerAdapter:getLastModified() #953
+                                        |       |       +---[0.004741ms] org.apache.commons.logging.Log:isDebugEnabled() #954
+                                        |       |       +---[0.019692ms] org.springframework.web.context.request.ServletWebRequest:<init>() #957
+                                        |       |       +---[0.014222ms] org.springframework.web.context.request.ServletWebRequest:checkNotModified() #957
+                                        |       |       +---[0.03975ms] org.springframework.web.servlet.HandlerExecutionChain:applyPreHandle() #962
+                                        |       |       +---[0.002188ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #967
+                                        |       |       +---[67.92092ms] org.springframework.web.servlet.HandlerAdapter:handle() #967
+                                        |       |       +---[0.032821ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #969
+                                        |       |       +---[0.466051ms] org.springframework.web.servlet.DispatcherServlet:applyDefaultViewName() #973
+                                        |       |       |   `---[0.275692ms] org.springframework.web.servlet.DispatcherServlet:applyDefaultViewName()
+                                        |       |       |       `---[0.032821ms] org.springframework.web.servlet.ModelAndView:hasView() #1013
+                                        |       |       +---[0.040478ms] org.springframework.web.servlet.HandlerExecutionChain:applyPostHandle() #974
+                                        |       |       +---[13.074226ms] org.springframework.web.servlet.DispatcherServlet:processDispatchResult() #984
+                                        |       |       |   `---[12.906112ms] org.springframework.web.servlet.DispatcherServlet:processDispatchResult()
+                                        |       |       |       +---[0.013493ms] org.springframework.web.servlet.ModelAndView:wasCleared() #1040
+                                        |       |       |       +---[12.64136ms] org.springframework.web.servlet.DispatcherServlet:render() #1041
+                                        |       |       |       |   `---[12.455378ms] org.springframework.web.servlet.DispatcherServlet:render()
+                                        |       |       |       |       +---[0.078404ms] org.springframework.web.servlet.LocaleResolver:resolveLocale() #1257
+                                        |       |       |       |       +---[0.063089ms] javax.servlet.http.HttpServletResponse:setLocale() #1258
+                                        |       |       |       |       +---[0.012035ms] org.springframework.web.servlet.ModelAndView:isReference() #1261
+                                        |       |       |       |       +---[0.006564ms] org.springframework.web.servlet.ModelAndView:getViewName() #1263
+                                        |       |       |       |       +---[0.008022ms] org.springframework.web.servlet.ModelAndView:getModelInternal() #1263
+                                        |       |       |       |       +---[9.662718ms] org.springframework.web.servlet.DispatcherServlet:resolveViewName() #1263
+                                        |       |       |       |       |   `---[9.537635ms] org.springframework.web.servlet.DispatcherServlet:resolveViewName()
+                                        |       |       |       |       |       `---[9.264496ms] org.springframework.web.servlet.ViewResolver:resolveViewName() #1325
+                                        |       |       |       |       |           +---[0.071475ms] javax.servlet.GenericServlet:<init>()
+                                        |       |       |       |       |           +---[min=0.047407ms,max=0.051054ms,total=0.098461ms,count=2] org.springframework.web.servlet.view.freemarker.FreeMarkerView$GenericServletAdapter:<init>()
+                                        |       |       |       |       |           +---[0.140399ms] javax.servlet.GenericServlet:init()
+                                        |       |       |       |       |           |   `---[0.075488ms] javax.servlet.GenericServlet:init() #158
+                                        |       |       |       |       |           |       `---[0.030268ms] javax.servlet.GenericServlet:init()
+                                        |       |       |       |       |           `---[0.199111ms] javax.servlet.GenericServlet:getServletContext()
+                                        |       |       |       |       |               +---[0.076581ms] javax.servlet.GenericServlet:getServletConfig() #123
+                                        |       |       |       |       |               |   `---[0.033915ms] javax.servlet.GenericServlet:getServletConfig()
+                                        |       |       |       |       |               `---[0.019693ms] javax.servlet.ServletConfig:getServletContext() #123
+                                        |       |       |       |       +---[0.00547ms] org.apache.commons.logging.Log:isDebugEnabled() #1279
+                                        |       |       |       |       +---[0.018599ms] org.springframework.web.servlet.ModelAndView:getStatus() #1283
+                                        |       |       |       |       +---[0.001824ms] org.springframework.web.servlet.ModelAndView:getModelInternal() #1286
+                                        |       |       |       |       `---[2.174905ms] org.springframework.web.servlet.View:render() #1286
+                                        |       |       |       +---[0.012034ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #1053
+                                        |       |       |       +---[0.004011ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #1053
+                                        |       |       |       `---[0.020786ms] org.springframework.web.servlet.HandlerExecutionChain:triggerAfterCompletion() #1059
+                                        |       |       `---[0.003283ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #994
+                                        |       +---[0.006929ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #904
+                                        |       `---[0.002188ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #904
+                                        +---[0.31143ms] org.springframework.web.servlet.FrameworkServlet:resetContextHolders() #986
+                                        |   `---[0.210051ms] org.springframework.web.servlet.FrameworkServlet:resetContextHolders()
+                                        |       +---[0.047407ms] org.springframework.context.i18n.LocaleContextHolder:setLocaleContext() #1059
+                                        |       +---[0.021516ms] org.springframework.web.context.request.RequestContextHolder:setRequestAttributes() #1060
+                                        |       `---[0.003647ms] org.apache.commons.logging.Log:isTraceEnabled() #1061
+                                        +---[0.025163ms] org.springframework.web.context.request.ServletRequestAttributes:requestCompleted() #988
+                                        +---[0.012034ms] org.apache.commons.logging.Log:isDebugEnabled() #991
+                                        `---[1.199042ms] org.springframework.web.servlet.FrameworkServlet:publishRequestHandledEvent() #1005
+                                            `---[1.104227ms] org.springframework.web.servlet.FrameworkServlet:publishRequestHandledEvent()
+                                                +---[0.01641ms] javax.servlet.http.HttpServletResponse:getStatus() #1072
+                                                +---[0.009481ms] javax.servlet.http.HttpServletRequest:getRequestURI() #1075
+                                                +---[0.055066ms] javax.servlet.http.HttpServletRequest:getRemoteAddr() #1075
+                                                +---[0.00547ms] javax.servlet.http.HttpServletRequest:getMethod() #1076
+                                                +---[0.186347ms] org.springframework.web.servlet.FrameworkServlet:getServletConfig() #1076
+                                                |   `---[0.106484ms] javax.servlet.GenericServlet:getServletConfig()
+                                                +---[0.022245ms] javax.servlet.ServletConfig:getServletName() #1076
+                                                +---[0.028445ms] org.springframework.web.util.WebUtils:getSessionId() #1077
+                                                +---[0.245425ms] org.springframework.web.servlet.FrameworkServlet:getUsernameForRequest() #1077
+                                                |   `---[0.142222ms] org.springframework.web.servlet.FrameworkServlet:getUsernameForRequest()
+                                                |       `---[0.018963ms] javax.servlet.http.HttpServletRequest:getUserPrincipal() #1091
+                                                +---[0.019328ms] org.springframework.web.context.support.ServletRequestHandledEvent:<init>() #1077
+                                                `---[0.106484ms] org.springframework.web.context.WebApplicationContext:publishEvent() #1073
+
+
+2020-03-08 15:44:11.907
+`---ts=2020-03-08 15:44:11;thread_name=http-nio-8080-exec-9;id=2b;is_daemon=true;priority=5;TCCL=org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedWebappClassLoader@bc3b152
+    `---[37.468971ms] javax.servlet.http.HttpServlet:service()
+        `---[37.343159ms] javax.servlet.http.HttpServlet:service() #742
+            `---[37.241051ms] org.springframework.web.servlet.FrameworkServlet:service()
+                +---[0.013857ms] javax.servlet.http.HttpServletRequest:getMethod() #841
+                +---[0.008022ms] org.springframework.http.HttpMethod:resolve() #841
+                `---[37.101016ms] org.springframework.web.servlet.HttpServletBean:service() #846
+                    `---[37.025165ms] javax.servlet.http.HttpServlet:service()
+                        +---[0.009482ms] javax.servlet.http.HttpServletRequest:getMethod() #628
+                        +---[0.168843ms] javax.servlet.http.HttpServlet:getLastModified() #631
+                        |   `---[0.099556ms] javax.servlet.http.HttpServlet:getLastModified()
+                        `---[36.737803ms] javax.servlet.http.HttpServlet:doGet() #635
+                            `---[36.679456ms] org.springframework.web.servlet.FrameworkServlet:doGet()
+                                `---[36.614179ms] org.springframework.web.servlet.FrameworkServlet:processRequest() #861
+                                    `---[36.567502ms] org.springframework.web.servlet.FrameworkServlet:processRequest()
+                                        +---[0.009117ms] org.springframework.context.i18n.LocaleContextHolder:getLocaleContext() #958
+                                        +---[0.120706ms] org.springframework.web.servlet.FrameworkServlet:buildLocaleContext() #959
+                                        |   `---[0.067464ms] org.springframework.web.servlet.DispatcherServlet:buildLocaleContext()
+                                        |       `---[0.002918ms] org.springframework.web.servlet.DispatcherServlet$1:<init>() #1076
+                                        +---[0.011305ms] org.springframework.web.context.request.RequestContextHolder:getRequestAttributes() #961
+                                        +---[0.498142ms] org.springframework.web.servlet.FrameworkServlet:buildRequestAttributes() #962
+                                        |   `---[0.377071ms] org.springframework.web.servlet.FrameworkServlet:buildRequestAttributes()
+                                        |       `---[0.014952ms] org.springframework.web.context.request.ServletRequestAttributes:<init>() #1035
+                                        +---[0.014952ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #964
+                                        +---[0.004741ms] org.springframework.web.servlet.FrameworkServlet$RequestBindingInterceptor:<init>() #965
+                                        +---[0.010211ms] org.springframework.web.context.request.async.WebAsyncManager:registerCallableInterceptor() #965
+                                        +---[0.891988ms] org.springframework.web.servlet.FrameworkServlet:initContextHolders() #967
+                                        |   `---[0.76253ms] org.springframework.web.servlet.FrameworkServlet:initContextHolders()
+                                        |       +---[0.026986ms] org.springframework.context.i18n.LocaleContextHolder:setLocaleContext() #1046
+                                        |       +---[0.020786ms] org.springframework.web.context.request.RequestContextHolder:setRequestAttributes() #1049
+                                        |       `---[0.009846ms] org.apache.commons.logging.Log:isTraceEnabled() #1051
+                                        +---[32.495207ms] org.springframework.web.servlet.FrameworkServlet:doService() #970
+                                        |   `---[31.567117ms] org.springframework.web.servlet.DispatcherServlet:doService()
+                                        |       +---[0.009481ms] org.apache.commons.logging.Log:isDebugEnabled() #867
+                                        |       +---[0.01167ms] org.springframework.web.util.WebUtils:isIncludeRequest() #876
+                                        |       +---[0.196558ms] org.springframework.web.servlet.DispatcherServlet:getWebApplicationContext() #888
+                                        |       |   `---[0.101379ms] org.springframework.web.servlet.FrameworkServlet:getWebApplicationContext()
+                                        |       +---[0.031727ms] javax.servlet.http.HttpServletRequest:setAttribute() #888
+                                        |       +---[0.011305ms] javax.servlet.http.HttpServletRequest:setAttribute() #889
+                                        |       +---[0.009482ms] javax.servlet.http.HttpServletRequest:setAttribute() #890
+                                        |       +---[0.648022ms] org.springframework.web.servlet.DispatcherServlet:getThemeSource() #891
+                                        |       |   `---[0.533516ms] org.springframework.web.servlet.DispatcherServlet:getThemeSource()
+                                        |       |       +---[0.180877ms] org.springframework.web.servlet.DispatcherServlet:getWebApplicationContext() #771
+                                        |       |       |   `---[0.106849ms] org.springframework.web.servlet.FrameworkServlet:getWebApplicationContext()
+                                        |       |       `---[0.167384ms] org.springframework.web.servlet.DispatcherServlet:getWebApplicationContext() #772
+                                        |       |           `---[0.104296ms] org.springframework.web.servlet.FrameworkServlet:getWebApplicationContext()
+                                        |       +---[0.035738ms] javax.servlet.http.HttpServletRequest:setAttribute() #891
+                                        |       +---[0.024433ms] org.springframework.web.servlet.FlashMapManager:retrieveAndUpdate() #893
+                                        |       +---[0.012763ms] org.springframework.web.servlet.FlashMap:<init>() #897
+                                        |       +---[0.040844ms] javax.servlet.http.HttpServletRequest:setAttribute() #897
+                                        |       +---[0.028445ms] javax.servlet.http.HttpServletRequest:setAttribute() #898
+                                        |       +---[29.959641ms] org.springframework.web.servlet.DispatcherServlet:doDispatch() #901
+                                        |       |   `---[29.845135ms] org.springframework.web.servlet.DispatcherServlet:doDispatch()
+                                        |       |       +---[0.024433ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #929
+                                        |       |       +---[0.230108ms] org.springframework.web.servlet.DispatcherServlet:checkMultipart() #936
+                                        |       |       |   `---[0.13967ms] org.springframework.web.servlet.DispatcherServlet:checkMultipart()
+                                        |       |       |       `---[0.013858ms] org.springframework.web.multipart.MultipartResolver:isMultipart() #1093
+                                        |       |       +---[5.206789ms] org.springframework.web.servlet.DispatcherServlet:getHandler() #940
+                                        |       |       |   `---[5.113068ms] org.springframework.web.servlet.DispatcherServlet:getHandler()
+                                        |       |       |       +---[min=0.006199ms,max=0.012399ms,total=0.018598ms,count=2] org.apache.commons.logging.Log:isTraceEnabled() #1156
+                                        |       |       |       `---[min=0.243966ms,max=4.561684ms,total=4.80565ms,count=2] org.springframework.web.servlet.HandlerMapping:getHandler() #1160
+                                        |       |       +---[0.005835ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #941
+                                        |       |       +---[0.006565ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #947
+                                        |       |       +---[0.328205ms] org.springframework.web.servlet.DispatcherServlet:getHandlerAdapter() #947
+                                        |       |       |   `---[0.215156ms] org.springframework.web.servlet.DispatcherServlet:getHandlerAdapter()
+                                        |       |       |       +---[0.007293ms] org.apache.commons.logging.Log:isTraceEnabled() #1195
+                                        |       |       |       `---[0.010576ms] org.springframework.web.servlet.HandlerAdapter:supports() #1198
+                                        |       |       +---[0.013128ms] javax.servlet.http.HttpServletRequest:getMethod() #950
+                                        |       |       +---[0.012763ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #953
+                                        |       |       +---[0.010576ms] org.springframework.web.servlet.HandlerAdapter:getLastModified() #953
+                                        |       |       +---[0.008753ms] org.apache.commons.logging.Log:isDebugEnabled() #954
+                                        |       |       +---[0.018234ms] org.springframework.web.context.request.ServletWebRequest:<init>() #957
+                                        |       |       +---[0.017505ms] org.springframework.web.context.request.ServletWebRequest:checkNotModified() #957
+                                        |       |       +---[0.108307ms] org.springframework.web.servlet.HandlerExecutionChain:applyPreHandle() #962
+                                        |       |       +---[0.009117ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #967
+                                        |       |       +---[9.210525ms] org.springframework.web.servlet.HandlerAdapter:handle() #967
+                                        |       |       +---[0.00474ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #969
+                                        |       |       +---[0.277151ms] org.springframework.web.servlet.DispatcherServlet:applyDefaultViewName() #973
+                                        |       |       |   `---[0.123259ms] org.springframework.web.servlet.DispatcherServlet:applyDefaultViewName()
+                                        |       |       |       `---[0.004011ms] org.springframework.web.servlet.ModelAndView:hasView() #1013
+                                        |       |       +---[0.009482ms] org.springframework.web.servlet.HandlerExecutionChain:applyPostHandle() #974
+                                        |       |       +---[13.694898ms] org.springframework.web.servlet.DispatcherServlet:processDispatchResult() #984
+                                        |       |       |   `---[13.546477ms] org.springframework.web.servlet.DispatcherServlet:processDispatchResult()
+                                        |       |       |       +---[0.004011ms] org.springframework.web.servlet.ModelAndView:wasCleared() #1040
+                                        |       |       |       +---[13.248175ms] org.springframework.web.servlet.DispatcherServlet:render() #1041
+                                        |       |       |       |   `---[13.166124ms] org.springframework.web.servlet.DispatcherServlet:render()
+                                        |       |       |       |       +---[0.012763ms] org.springframework.web.servlet.LocaleResolver:resolveLocale() #1257
+                                        |       |       |       |       +---[0.046679ms] javax.servlet.http.HttpServletResponse:setLocale() #1258
+                                        |       |       |       |       +---[0.003282ms] org.springframework.web.servlet.ModelAndView:isReference() #1261
+                                        |       |       |       |       +---[0.006199ms] org.springframework.web.servlet.ModelAndView:getViewName() #1263
+                                        |       |       |       |       +---[0.004376ms] org.springframework.web.servlet.ModelAndView:getModelInternal() #1263
+                                        |       |       |       |       +---[10.642593ms] org.springframework.web.servlet.DispatcherServlet:resolveViewName() #1263
+                                        |       |       |       |       |   `---[10.496359ms] org.springframework.web.servlet.DispatcherServlet:resolveViewName()
+                                        |       |       |       |       |       `---[10.268439ms] org.springframework.web.servlet.ViewResolver:resolveViewName() #1325
+                                        |       |       |       |       |           +---[0.129459ms] javax.servlet.GenericServlet:<init>()
+                                        |       |       |       |       |           +---[min=0.123989ms,max=0.16155ms,total=0.285539ms,count=2] org.springframework.web.servlet.view.freemarker.FreeMarkerView$GenericServletAdapter:<init>()
+                                        |       |       |       |       |           +---[0.307419ms] javax.servlet.GenericServlet:init()
+                                        |       |       |       |       |           |   `---[0.179784ms] javax.servlet.GenericServlet:init() #158
+                                        |       |       |       |       |           |       `---[0.082416ms] javax.servlet.GenericServlet:init()
+                                        |       |       |       |       |           `---[0.306689ms] javax.servlet.GenericServlet:getServletContext()
+                                        |       |       |       |       |               +---[0.140399ms] javax.servlet.GenericServlet:getServletConfig() #123
+                                        |       |       |       |       |               |   `---[0.082416ms] javax.servlet.GenericServlet:getServletConfig()
+                                        |       |       |       |       |               `---[0.016775ms] javax.servlet.ServletConfig:getServletContext() #123
+                                        |       |       |       |       +---[0.004012ms] org.apache.commons.logging.Log:isDebugEnabled() #1279
+                                        |       |       |       |       +---[0.004011ms] org.springframework.web.servlet.ModelAndView:getStatus() #1283
+                                        |       |       |       |       +---[0.002553ms] org.springframework.web.servlet.ModelAndView:getModelInternal() #1286
+                                        |       |       |       |       `---[2.111088ms] org.springframework.web.servlet.View:render() #1286
+                                        |       |       |       +---[0.012399ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #1053
+                                        |       |       |       +---[0.00547ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #1053
+                                        |       |       |       `---[0.010575ms] org.springframework.web.servlet.HandlerExecutionChain:triggerAfterCompletion() #1059
+                                        |       |       `---[0.005834ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #994
+                                        |       +---[0.014952ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #904
+                                        |       `---[0.004376ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #904
+                                        +---[0.678655ms] org.springframework.web.servlet.FrameworkServlet:resetContextHolders() #986
+                                        |   `---[0.390199ms] org.springframework.web.servlet.FrameworkServlet:resetContextHolders()
+                                        |       +---[0.114872ms] org.springframework.context.i18n.LocaleContextHolder:setLocaleContext() #1059
+                                        |       +---[0.020421ms] org.springframework.web.context.request.RequestContextHolder:setRequestAttributes() #1060
+                                        |       `---[0.004376ms] org.apache.commons.logging.Log:isTraceEnabled() #1061
+                                        +---[0.033915ms] org.springframework.web.context.request.ServletRequestAttributes:requestCompleted() #988
+                                        +---[0.006199ms] org.apache.commons.logging.Log:isDebugEnabled() #991
+                                        `---[1.290939ms] org.springframework.web.servlet.FrameworkServlet:publishRequestHandledEvent() #1005
+                                            `---[1.118449ms] org.springframework.web.servlet.FrameworkServlet:publishRequestHandledEvent()
+                                                +---[0.008388ms] javax.servlet.http.HttpServletResponse:getStatus() #1072
+                                                +---[0.003647ms] javax.servlet.http.HttpServletRequest:getRequestURI() #1075
+                                                +---[0.018963ms] javax.servlet.http.HttpServletRequest:getRemoteAddr() #1075
+                                                +---[0.016046ms] javax.servlet.http.HttpServletRequest:getMethod() #1076
+                                                +---[0.206405ms] org.springframework.web.servlet.FrameworkServlet:getServletConfig() #1076
+                                                |   `---[0.109401ms] javax.servlet.GenericServlet:getServletConfig()
+                                                +---[0.01094ms] javax.servlet.ServletConfig:getServletName() #1076
+                                                +---[0.021151ms] org.springframework.web.util.WebUtils:getSessionId() #1077
+                                                +---[0.253083ms] org.springframework.web.servlet.FrameworkServlet:getUsernameForRequest() #1077
+                                                |   `---[0.144045ms] org.springframework.web.servlet.FrameworkServlet:getUsernameForRequest()
+                                                |       `---[0.01094ms] javax.servlet.http.HttpServletRequest:getUserPrincipal() #1091
+                                                +---[0.014587ms] org.springframework.web.context.support.ServletRequestHandledEvent:<init>() #1077
+                                                `---[0.102108ms] org.springframework.web.context.WebApplicationContext:publishEvent() #1073
+
+
+2020-03-08 15:44:12.023
+`---ts=2020-03-08 15:44:11;thread_name=http-nio-8080-exec-8;id=2a;is_daemon=true;priority=5;TCCL=org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedWebappClassLoader@bc3b152
+    `---[40.742633ms] javax.servlet.http.HttpServlet:service()
+        `---[40.035898ms] javax.servlet.http.HttpServlet:service() #742
+            `---[39.933061ms] org.springframework.web.servlet.FrameworkServlet:service()
+                +---[0.009117ms] javax.servlet.http.HttpServletRequest:getMethod() #841
+                +---[0.005835ms] org.springframework.http.HttpMethod:resolve() #841
+                `---[39.755466ms] org.springframework.web.servlet.HttpServletBean:service() #846
+                    `---[39.65591ms] javax.servlet.http.HttpServlet:service()
+                        +---[0.003647ms] javax.servlet.http.HttpServletRequest:getMethod() #628
+                        +---[0.127635ms] javax.servlet.http.HttpServlet:getLastModified() #631
+                        |   `---[0.069652ms] javax.servlet.http.HttpServlet:getLastModified()
+                        `---[39.176366ms] javax.servlet.http.HttpServlet:doGet() #635
+                            `---[38.980902ms] org.springframework.web.servlet.FrameworkServlet:doGet()
+                                `---[38.798566ms] org.springframework.web.servlet.FrameworkServlet:processRequest() #861
+                                    `---[38.728184ms] org.springframework.web.servlet.FrameworkServlet:processRequest()
+                                        +---[0.00474ms] org.springframework.context.i18n.LocaleContextHolder:getLocaleContext() #958
+                                        +---[0.146598ms] org.springframework.web.servlet.FrameworkServlet:buildLocaleContext() #959
+                                        |   `---[0.093356ms] org.springframework.web.servlet.DispatcherServlet:buildLocaleContext()
+                                        |       `---[0.004012ms] org.springframework.web.servlet.DispatcherServlet$1:<init>() #1076
+                                        +---[0.005105ms] org.springframework.web.context.request.RequestContextHolder:getRequestAttributes() #961
+                                        +---[0.198382ms] org.springframework.web.servlet.FrameworkServlet:buildRequestAttributes() #962
+                                        |   `---[0.112683ms] org.springframework.web.servlet.FrameworkServlet:buildRequestAttributes()
+                                        |       `---[0.012399ms] org.springframework.web.context.request.ServletRequestAttributes:<init>() #1035
+                                        +---[0.014587ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #964
+                                        +---[0.004376ms] org.springframework.web.servlet.FrameworkServlet$RequestBindingInterceptor:<init>() #965
+                                        +---[0.006564ms] org.springframework.web.context.request.async.WebAsyncManager:registerCallableInterceptor() #965
+                                        +---[0.311066ms] org.springframework.web.servlet.FrameworkServlet:initContextHolders() #967
+                                        |   `---[0.203851ms] org.springframework.web.servlet.FrameworkServlet:initContextHolders()
+                                        |       +---[0.013858ms] org.springframework.context.i18n.LocaleContextHolder:setLocaleContext() #1046
+                                        |       +---[0.00547ms] org.springframework.web.context.request.RequestContextHolder:setRequestAttributes() #1049
+                                        |       `---[0.004741ms] org.apache.commons.logging.Log:isTraceEnabled() #1051
+                                        +---[35.250306ms] org.springframework.web.servlet.FrameworkServlet:doService() #970
+                                        |   `---[35.135069ms] org.springframework.web.servlet.DispatcherServlet:doService()
+                                        |       +---[0.005106ms] org.apache.commons.logging.Log:isDebugEnabled() #867
+                                        |       +---[0.0062ms] org.springframework.web.util.WebUtils:isIncludeRequest() #876
+                                        |       +---[0.086063ms] org.springframework.web.servlet.DispatcherServlet:getWebApplicationContext() #888
+                                        |       |   `---[0.040479ms] org.springframework.web.servlet.FrameworkServlet:getWebApplicationContext()
+                                        |       +---[0.01641ms] javax.servlet.http.HttpServletRequest:setAttribute() #888
+                                        |       +---[0.004376ms] javax.servlet.http.HttpServletRequest:setAttribute() #889
+                                        |       +---[0.003647ms] javax.servlet.http.HttpServletRequest:setAttribute() #890
+                                        |       +---[0.672091ms] org.springframework.web.servlet.DispatcherServlet:getThemeSource() #891
+                                        |       |   `---[0.595145ms] org.springframework.web.servlet.DispatcherServlet:getThemeSource()
+                                        |       |       +---[0.198382ms] org.springframework.web.servlet.DispatcherServlet:getWebApplicationContext() #771
+                                        |       |       |   `---[0.107213ms] org.springframework.web.servlet.FrameworkServlet:getWebApplicationContext()
+                                        |       |       `---[0.208592ms] org.springframework.web.servlet.DispatcherServlet:getWebApplicationContext() #772
+                                        |       |           `---[0.114143ms] org.springframework.web.servlet.FrameworkServlet:getWebApplicationContext()
+                                        |       +---[0.021515ms] javax.servlet.http.HttpServletRequest:setAttribute() #891
+                                        |       +---[0.01714ms] org.springframework.web.servlet.FlashMapManager:retrieveAndUpdate() #893
+                                        |       +---[0.008388ms] org.springframework.web.servlet.FlashMap:<init>() #897
+                                        |       +---[0.047042ms] javax.servlet.http.HttpServletRequest:setAttribute() #897
+                                        |       +---[0.021515ms] javax.servlet.http.HttpServletRequest:setAttribute() #898
+                                        |       +---[33.931286ms] org.springframework.web.servlet.DispatcherServlet:doDispatch() #901
+                                        |       |   `---[33.851788ms] org.springframework.web.servlet.DispatcherServlet:doDispatch()
+                                        |       |       +---[0.005105ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #929
+                                        |       |       +---[0.174678ms] org.springframework.web.servlet.DispatcherServlet:checkMultipart() #936
+                                        |       |       |   `---[0.116695ms] org.springframework.web.servlet.DispatcherServlet:checkMultipart()
+                                        |       |       |       `---[0.006929ms] org.springframework.web.multipart.MultipartResolver:isMultipart() #1093
+                                        |       |       +---[0.823065ms] org.springframework.web.servlet.DispatcherServlet:getHandler() #940
+                                        |       |       |   `---[0.733356ms] org.springframework.web.servlet.DispatcherServlet:getHandler()
+                                        |       |       |       +---[0.006199ms] org.apache.commons.logging.Log:isTraceEnabled() #1156
+                                        |       |       |       `---[0.521846ms] org.springframework.web.servlet.HandlerMapping:getHandler() #1160
+                                        |       |       +---[0.008023ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #941
+                                        |       |       +---[0.003282ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #947
+                                        |       |       +---[0.335863ms] org.springframework.web.servlet.DispatcherServlet:getHandlerAdapter() #947
+                                        |       |       |   `---[0.249435ms] org.springframework.web.servlet.DispatcherServlet:getHandlerAdapter()
+                                        |       |       |       +---[min=0.002553ms,max=0.007293ms,total=0.009846ms,count=2] org.apache.commons.logging.Log:isTraceEnabled() #1195
+                                        |       |       |       `---[min=0.006929ms,max=0.007659ms,total=0.014588ms,count=2] org.springframework.web.servlet.HandlerAdapter:supports() #1198
+                                        |       |       +---[0.009481ms] javax.servlet.http.HttpServletRequest:getMethod() #950
+                                        |       |       +---[0.006929ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #953
+                                        |       |       +---[0.004741ms] org.springframework.web.servlet.HandlerAdapter:getLastModified() #953
+                                        |       |       +---[0.008387ms] org.apache.commons.logging.Log:isDebugEnabled() #954
+                                        |       |       +---[0.018233ms] org.springframework.web.context.request.ServletWebRequest:<init>() #957
+                                        |       |       +---[0.024068ms] org.springframework.web.context.request.ServletWebRequest:checkNotModified() #957
+                                        |       |       +---[0.044125ms] org.springframework.web.servlet.HandlerExecutionChain:applyPreHandle() #962
+                                        |       |       +---[0.002917ms] org.springframework.web.servlet.HandlerExecutionChain:getHandler() #967
+                                        |       |       +---[31.225419ms] org.springframework.web.servlet.HandlerAdapter:handle() #967
+                                        |       |       +---[0.010576ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #969
+                                        |       |       +---[0.367589ms] org.springframework.web.servlet.DispatcherServlet:applyDefaultViewName() #973
+                                        |       |       |   `---[0.169937ms] org.springframework.web.servlet.DispatcherServlet:applyDefaultViewName()
+                                        |       |       +---[0.013129ms] org.springframework.web.servlet.HandlerExecutionChain:applyPostHandle() #974
+                                        |       |       +---[0.268034ms] org.springframework.web.servlet.DispatcherServlet:processDispatchResult() #984
+                                        |       |       |   `---[0.158997ms] org.springframework.web.servlet.DispatcherServlet:processDispatchResult()
+                                        |       |       |       +---[0.00547ms] org.apache.commons.logging.Log:isDebugEnabled() #1047
+                                        |       |       |       +---[0.005835ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #1053
+                                        |       |       |       +---[0.002188ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #1053
+                                        |       |       |       `---[0.004741ms] org.springframework.web.servlet.HandlerExecutionChain:triggerAfterCompletion() #1059
+                                        |       |       `---[0.002188ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #994
+                                        |       +---[0.003282ms] org.springframework.web.context.request.async.WebAsyncUtils:getAsyncManager() #904
+                                        |       `---[0.001823ms] org.springframework.web.context.request.async.WebAsyncManager:isConcurrentHandlingStarted() #904
+                                        +---[0.20057ms] org.springframework.web.servlet.FrameworkServlet:resetContextHolders() #986
+                                        |   `---[0.139669ms] org.springframework.web.servlet.FrameworkServlet:resetContextHolders()
+                                        |       +---[0.016774ms] org.springframework.context.i18n.LocaleContextHolder:setLocaleContext() #1059
+                                        |       +---[0.006929ms] org.springframework.web.context.request.RequestContextHolder:setRequestAttributes() #1060
+                                        |       `---[0.002917ms] org.apache.commons.logging.Log:isTraceEnabled() #1061
+                                        +---[0.02261ms] org.springframework.web.context.request.ServletRequestAttributes:requestCompleted() #988
+                                        +---[0.006199ms] org.apache.commons.logging.Log:isDebugEnabled() #991
+                                        `---[2.212831ms] org.springframework.web.servlet.FrameworkServlet:publishRequestHandledEvent() #1005
+                                            `---[2.078632ms] org.springframework.web.servlet.FrameworkServlet:publishRequestHandledEvent()
+                                                +---[0.006929ms] javax.servlet.http.HttpServletResponse:getStatus() #1072
+                                                +---[0.007658ms] javax.servlet.http.HttpServletRequest:getRequestURI() #1075
+                                                +---[0.04996ms] javax.servlet.http.HttpServletRequest:getRemoteAddr() #1075
+                                                +---[0.008388ms] javax.servlet.http.HttpServletRequest:getMethod() #1076
+                                                +---[0.204946ms] org.springframework.web.servlet.FrameworkServlet:getServletConfig() #1076
+                                                |   `---[0.098097ms] javax.servlet.GenericServlet:getServletConfig()
+                                                +---[0.011305ms] javax.servlet.ServletConfig:getServletName() #1076
+                                                +---[0.018234ms] org.springframework.web.util.WebUtils:getSessionId() #1077
+                                                +---[1.038222ms] org.springframework.web.servlet.FrameworkServlet:getUsernameForRequest() #1077
+                                                |   `---[0.934654ms] org.springframework.web.servlet.FrameworkServlet:getUsernameForRequest()
+                                                |       `---[0.008753ms] javax.servlet.http.HttpServletRequest:getUserPrincipal() #1091
+                                                +---[0.079498ms] org.springframework.web.context.support.ServletRequestHandledEvent:<init>() #1077
+                                                `---[0.193276ms] org.springframework.web.context.WebApplicationContext:publishEvent() #1073
+
+

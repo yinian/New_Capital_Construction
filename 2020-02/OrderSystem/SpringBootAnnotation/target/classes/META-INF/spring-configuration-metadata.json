@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.liuwen.EnableConfigurationProperties.EnableConfigurationPropertiesDomain",
+      "name": "configuration.properties",
+      "type": "com.liuwen.EnableConfigurationProperties.EnableConfigurationPropertiesDomain"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.liuwen.EnableConfigurationProperties.EnableConfigurationPropertiesDomain",
+      "name": "configuration.properties.name",
+      "type": "java.lang.String"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+package com.viagra.springBoot.conditionalOnBean;
+
+/**
+ * @Auther: viagra
+ * @Date: 2020/2/26 20:29
+ * @Description:
+ */
+public class SpringService {
+}
